@@ -485,42 +485,35 @@ B_03_05_measured_df <- data.frame(
 )
 
 ###### B_03_06: Bridge Notes ###################################################
-# Note: Four paragraphs under the stage 6 figure, naming the three pieces
+# Note: Three paragraphs under the stage 6 figure, naming the three pieces
 #   every bar is cut into.
 
 B_03_06_bridge_lst <- list(
   paste(
-    "<strong>Read the figure as three pieces, not two kinds of bar.</strong>",
-    "Every bar starts with the direct euro of demand itself. An input-output",
-    "multiplier then adds the SUPPLY CHAIN — the cement, haulage and",
-    "professional services a euro of construction demand pulls in — and, if",
-    "it is a Type II multiplier, the INDUCED round on top of that: the wages",
+    "Every bar is cut into three pieces. The first is the direct euro of",
+    "demand. An input-output multiplier adds the supply chain, the cement,",
+    "haulage and professional services a euro of construction demand pulls",
+    "in, and a Type II multiplier adds the induced round on top, the wages",
     "earned along the chain being spent again. Type I is the first two",
-    "pieces; Type II is all three. The difference between them is the green",
-    "segment, and it is labelled rather than left to be subtracted."
+    "pieces, Type II all three, and the green segment is the difference."
   ),
   paste(
-    "<strong>The induced round is the only shared part.</strong> This",
-    "model has no supply chain in it at all: it never asks what a euro of",
-    "demand is spent ON, only whose income it becomes. Its whole multiplier",
-    "is the direct euro plus induced rounds, which is why its bar has a green",
-    "segment and no blue one. The Keynesian multiplier is not a rival",
-    "estimate of an input-output multiplier; it is an estimate of one",
-    "component of one."
+    "This model has no supply chain. It never asks what a euro is spent on,",
+    "only whose income it becomes, so its multiplier is the direct euro plus",
+    "induced rounds and its bar has a green segment and no blue one. It is",
+    "not a rival to an input-output multiplier but an estimate of one",
+    "component of one, and that is what the comparison tests. Ireland's",
+    "Type II figure for construction adds 0.34 to a Type I of 1.75, an",
+    "induced round worth about a fifth of the direct euro. Set the leakages",
+    "so that k &minus; 1 is near that and the two descriptions of the same",
+    "economy agree. Set them elsewhere and one of them is wrong about how",
+    "much income leaks away."
   ),
   paste(
-    "<strong>Which is what makes the comparison sharp.</strong> Ireland's",
-    "published Type II figure for construction adds 0.34 on top of a Type I",
-    "of 1.75 — an induced round worth about a fifth of the direct euro. Set",
-    "the leakages in this model so that k − 1 is near that, and the two",
-    "descriptions of the same economy agree; set them so that it is not, and",
-    "at least one of them is wrong about how much income leaks away."
-  ),
-  paste(
-    "<strong>Both are held down by the same leakage.</strong> Ireland's",
-    "average measured multiplier fell from about 1.39 in 1998 to 1.24 in",
-    "2022, as production became more import-intensive. That is the import",
-    "share on the left, showing up in the data."
+    "The same leakage shows in the trend. Ireland's average measured",
+    "multiplier fell from about 1.39 in 1998 to 1.24 in 2022 as production",
+    "became more import-intensive. That is the import share on the left,",
+    "in the data."
   )
 )
 
@@ -1107,15 +1100,15 @@ B_03_19_calib_df <- data.frame(
             "&euro;123.7bn", "&euro;40.2bn", "&euro;19.9bn", "&euro;0bn",
             "&euro;272.9bn"),
   source = c(
-    paste("<strong>Not from the tables.</strong> A supply-use table records",
-          "what was spent, never what would have been spent out of one more",
-          "euro. Taken from the consumption literature: the annual marginal",
-          "propensity to consume out of transitory income, 0.5 to 0.6."),
+    paste("Not from the tables, which record what was spent, never what",
+          "would have been spent out of one more euro. Taken from the",
+          "consumption literature: the annual marginal propensity to consume",
+          "out of transitory income, 0.5 to 0.6."),
     paste("All tax in the tables &mdash; taxes on products &euro;13.4bn,",
           "other taxes on production &euro;1.1bn, income tax &euro;31.3bn,",
           "social contributions &euro;16.0bn, corporation tax &euro;22.6bn,",
           "&euro;84.5bn in all &mdash; over GNI* of &euro;272.9bn. An",
-          "<strong>average</strong> rate standing in for a marginal one."),
+          "average rate standing in for a marginal one."),
     paste("Import content of &euro;1 of household spending = 0.35: direct",
           "imports &euro;22.9bn / &euro;123.5bn = 0.185, plus 0.163 embodied",
           "in the Irish products households buy, from the Leontief inverse",
@@ -1154,61 +1147,51 @@ B_03_19_calib_df <- data.frame(
 B_03_20_reveal_lst <- list(
   head = "These Were Ireland's Own Numbers",
   lede = paste(
-    "Nothing on the sliders was invented. Every leakage you have been",
-    "moving for five stages, and every level you have been moving it",
-    "against, is the Irish economy in 2022, taken from the CSO Supply and",
-    "Use and Input-Output Tables for that year &mdash; the same file the",
-    "input-output app draws on. At those values Ireland's multiplier is",
-    "<strong>k = 1.33</strong>: a euro of demand becomes about &euro;1.33",
-    "of output, because 31 cents of every euro of income goes in tax, 31",
-    "cents is not spent, and 13 cents goes abroad."
+    "Nothing on the sliders was invented. Every leakage and every level",
+    "you have been moving for five stages is the Irish economy in 2022,",
+    "taken from the CSO Supply and Use and Input-Output Tables for that",
+    "year, the same file the input-output app draws on. At those values",
+    "Ireland's multiplier is k = 1.33: a euro of demand becomes about",
+    "&euro;1.33 of output, because of every euro of income 31 cents goes",
+    "in tax, 31 cents is not spent and 13 cents goes abroad."
   ),
   notes = c(
-    paste("<strong>Why GNI* and not GDP.</strong> Irish GDP in 2022 was",
-          "&euro;507.5bn, of which household consumption was 24 per cent and",
-          "net exports 56 per cent. No textbook consumption function fits",
-          "that: with any household MPC you would need autonomous",
-          "consumption of about &minus;&euro;215bn to reproduce the measured",
-          "level of C. The reason is that most of Irish GDP is profit and",
+    paste("The income base is GNI*, not GDP. Irish GDP in 2022 was",
+          "&euro;507.5bn, of which household consumption was 24 per cent",
+          "and net exports 56 per cent. No consumption function fits that:",
+          "reproducing measured C would need autonomous consumption of",
+          "about &minus;&euro;215bn. Most of Irish GDP is profit and",
           "depreciation accruing to foreign-owned firms and never becomes",
-          "anyone's income to spend. GNI* takes that out, and on the GNI*",
-          "base the accounts behave like a normal economy: C is 45 per cent,",
-          "G 21, I 16 and the external balance 18."),
-    paste("<strong>Average is not marginal.</strong> t and m here are",
-          "<em>average</em> ratios from a single year &mdash; total tax over",
-          "income, import content per euro of spending. The model needs",
-          "<em>marginal</em> propensities: what happens to the NEXT euro.",
-          "They coincide only if the ratios are flat in income, which they",
-          "are not: Ireland's tax system is progressive, so the marginal",
-          "rate is above 0.31, and import content rises with income. Treat",
-          "them as the best available proxies, not as measurements."),
-    paste("<strong>The MPC is not in the data at all.</strong> A supply-use",
-          "table is a photograph of one year's spending. It can tell you",
-          "what households spent; it cannot tell you what they would have",
-          "spent out of one more euro. c = 0.55 is a number from the",
-          "consumption literature, and c<sub>0</sub> is then whatever it",
-          "takes to hit the measured level of consumption. If you think the",
-          "MPC is 0.7, change it &mdash; and watch what it does to k."),
-    paste("<strong>What the budget tile is and is not.</strong> G here is",
-          "government purchases of goods and services only. Transfers,",
+          "anyone's income to spend. GNI* takes that out, and on that base",
+          "the accounts look like a normal economy: C is 45 per cent, G 21,",
+          "I 16 and the external balance 18."),
+    paste("t and m are average ratios from one year, total tax over income",
+          "and import content per euro of spending, standing in for the",
+          "marginal propensities the model needs. The two coincide only if",
+          "the ratios are flat in income, which they are not: Ireland's tax",
+          "system is progressive, so the marginal rate is above 0.31, and",
+          "import content rises with income. The MPC is not in the tables",
+          "at all. A supply-use table records what households spent, not",
+          "what they would have spent out of one more euro, so c = 0.55",
+          "comes from the consumption literature and c<sub>0</sub> is",
+          "whatever hits the measured level of consumption. Treat all three",
+          "as proxies. If you think the MPC is 0.7, change it and watch k."),
+    paste("G is government purchases of goods and services only. Transfers,",
           "public investment, interest and non-tax revenue are outside the",
           "model, so T &minus; G at the defaults (about +&euro;27bn) is a",
-          "purchases balance, not the general government balance &mdash;",
-          "Ireland ran a surplus of roughly &euro;8bn in 2022. The tile's",
-          "<em>change</em>, which is what the fiscal scenarios turn on, is",
-          "exactly right whatever the level."),
-    paste("<strong>And &ldquo;saved&rdquo; means &ldquo;not spent&rdquo;.",
-          "</strong> The saving slice of the marginal-euro bar is every euro",
-          "of income that does not come back as demand: household saving,",
-          "but also income retained by firms and income that never reaches",
-          "an Irish household. In an economy like Ireland's that second part",
-          "is the larger one."),
-    paste("<strong>Source.</strong> CSO, Supply and Use and Input-Output",
-          "Tables for Ireland 2022, Tables 2.9, 2.10 and 2.6, as shipped",
-          "with the input-output app in",
-          "<code>_apps/io-multiplier/data/io_products.csv</code>. GNI* is",
-          "the CSO's own 2022 estimate. Everything else above is arithmetic",
-          "on those columns, set out row by row in the table.")
+          "purchases balance, not the general government balance, which",
+          "was a surplus of roughly &euro;8bn in 2022. The change in the",
+          "tile, which is what the fiscal scenarios turn on, is right",
+          "whatever the level. In the same way the saving slice of the",
+          "marginal-euro bar is every euro of income that does not come",
+          "back as demand: household saving, but also income retained by",
+          "firms and income that never reaches an Irish household, which",
+          "in Ireland is the larger part."),
+    paste("Source: CSO, Supply and Use and Input-Output Tables for Ireland",
+          "2022, Tables 2.9, 2.10 and 2.6, as shipped with the input-output",
+          "app in <code>_apps/io-multiplier/data/io_products.csv</code>.",
+          "GNI* is the CSO's own 2022 estimate. Everything else is",
+          "arithmetic on those columns, set out in the table.")
   )
 )
 
@@ -1218,45 +1201,42 @@ B_03_20_reveal_lst <- list(
 
 B_03_21_fiscal_lst <- list(
   paste(
-    "<strong>On its own, tax is a leakage.</strong> Every euro the",
-    "Exchequer takes at each round is a euro that does not become someone",
-    "else's income in the next one. That is the whole of why the tax rate",
-    "sits inside the multiplier as k = 1/(1 &minus; c(1 &minus; t)): raise",
-    "t and each round is smaller than the last by more, so the series that",
-    "the rounds figure draws dies out faster. Raise lump-sum taxes on their",
-    "own and output falls by c&#772;k times the rise &mdash; and the budget",
-    "balance tile moves into surplus, which is the leakage, sitting there."
+    "Tax on its own is a leakage. Every euro the Exchequer takes at one",
+    "round is a euro that does not become someone else's income at the",
+    "next, which is why t sits inside k = 1/(1 &minus; c(1 &minus; t)):",
+    "raise it and each round shrinks faster, so the series in the rounds",
+    "figure dies out sooner. Raise lump-sum taxes alone and output falls by",
+    "c&#772;k times the rise while the budget tile moves into surplus. That",
+    "surplus is the leakage."
   ),
   paste(
-    "<strong>It stops being a leakage to the extent the government spends",
-    "it back.</strong> Raise G and T<sub>0</sub> by the same amount and",
-    "output still RISES. The spending enters the flow at its full value;",
-    "the tax only reduces spending by c&#772; times the amount, because",
-    "households absorb part of the tax by saving less. What is left over is",
-    "the balanced-budget multiplier, (1 &minus; c&#772;)k, and in the bare",
-    "model &mdash; no tax rate, no imports &mdash; it is exactly one: a euro",
-    "taxed and spent buys a euro of output. Nothing has been borrowed."
+    "It stops being a leakage to the extent the government spends it back.",
+    "Raise G and T<sub>0</sub> by the same amount and output still rises.",
+    "The spending enters the flow at full value; the tax cuts spending by",
+    "only c&#772; times the amount, because households absorb part of it by",
+    "saving less. The remainder is the balanced-budget multiplier,",
+    "(1 &minus; c&#772;)k, which in the bare model with no tax rate and no",
+    "imports is exactly one. A euro taxed and spent buys a euro of output,",
+    "and nothing has been borrowed."
   ),
   paste(
-    "<strong>A deficit brings in demand from outside the flow.</strong> If",
-    "G exceeds T the difference is borrowed, and borrowing is spending the",
-    "circular flow did not itself generate. Where it comes from matters. If",
-    "the lender is abroad, the euro is genuinely external demand, doing the",
-    "same work as an export. If the lender is a domestic saver, it is a",
-    "transfer within the flow, and the model is quietly assuming that saver",
-    "had no other use for the money &mdash; an assumption that is fine when",
-    "there is spare capacity and idle saving, and much less fine when there",
-    "is not. Read the budget tile beside &Delta;Y: it names the package",
-    "balanced, borrowed or in surplus, and the borrowing is always less",
-    "than &Delta;G &minus; &Delta;T<sub>0</sub>, because the extra output",
-    "pays part of the bill back in tax."
+    "A deficit brings in demand from outside the flow. If G exceeds T the",
+    "difference is borrowed, and where it comes from matters. A foreign",
+    "lender supplies genuinely external demand, doing the same work as an",
+    "export. A domestic saver supplies a transfer within the flow, and the",
+    "model is assuming that saver had no other use for the money, which",
+    "holds when there is spare capacity and idle saving and not otherwise.",
+    "The budget tile beside &Delta;Y names the package balanced, borrowed",
+    "or in surplus. The borrowing is always less than &Delta;G &minus;",
+    "&Delta;T<sub>0</sub>, because the extra output pays part of the bill",
+    "back in tax."
   )
 )
 
 ###### B_03_22: Version ########################################################
 # Note: Semantic version, shown in the footer; CHANGELOG.md has the history.
 
-B_03_22_version_chr <- "1.0.6"
+B_03_22_version_chr <- "1.0.7"
 
 ###### B_03_23: Source Repository ##############################################
 # Note: The GitHub repo, linked from the footer.
