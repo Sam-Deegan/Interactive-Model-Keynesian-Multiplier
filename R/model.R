@@ -168,7 +168,7 @@ C_01_05_equilibrium_fn <- function(par, delta = TRUE) {
 
 ###### C_01_06: Planned Expenditure Line #######################################
 # Note: Planned expenditure at each level of income: the AE line of the
-#   Keynesian cross. The 45 degree line is y = y.
+#   Keynesian cross. The E = Y line is the identity.
 
 C_01_06_ae_line_fn <- function(par, y_grid, delta = TRUE) {
   cbar <- C_01_01_mpc_fn(par)
