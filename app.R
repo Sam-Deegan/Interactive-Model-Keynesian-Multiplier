@@ -1256,7 +1256,7 @@ B_03_21_fiscal_lst <- list(
 ###### B_03_22: Version ########################################################
 # Note: Semantic version, shown in the footer; CHANGELOG.md has the history.
 
-B_03_22_version_chr <- "1.0.4"
+B_03_22_version_chr <- "1.0.5"
 
 ###### B_03_23: Source Repository ##############################################
 # Note: The GitHub repo, linked from the footer.
