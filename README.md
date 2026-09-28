@@ -8,7 +8,7 @@ University College Dublin.
 **Try it in the browser (nothing to install):**
 https://sam-deegan.com/toy-models/keynesian-multiplier/
 
-Current version: **1.0.0** (see [CHANGELOG.md](CHANGELOG.md)). The version
+Current version: **1.0.1** (see [CHANGELOG.md](CHANGELOG.md)). The version
 is shown in the app footer; releases are tagged `vX.Y.Z`.
 
 ## What it does
@@ -147,7 +147,7 @@ numerical solver.
 
 - *1* The cross and the rounds. A fall in investment moves output by more
   than itself, because each round of lost income cuts consumption again;
-  the 45° line is the identity `E = Y`, not the multiplier.
+  the `E = Y` line is the identity, not the multiplier.
 - *2* Tax on its own is a leakage; spending it back is not. A balanced
   package still raises output, by `(1 − c̄) k` times the sum, while
   borrowing brings in demand from outside the flow. A higher tax rate

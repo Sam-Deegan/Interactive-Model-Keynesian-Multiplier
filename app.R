@@ -175,9 +175,9 @@ B_03_04_scenarios_lst <- list(
     story  = paste(
       "Firms cut investment (I) by €20bn, so autonomous spending (A) falls by",
       "the full €20bn and the planned-expenditure line drops by that much",
-      "without changing its slope. It meets the 45° line further to the left:",
+      "without changing its slope. It meets the E = Y line further to the left:",
       "income (Y) on the horizontal axis and planned expenditure on the",
-      "vertical fall together, and both fall by more than €20bn. The 45° line",
+      "vertical fall together, and both fall by more than €20bn. The E = Y line",
       "is only the set of points where planned expenditure equals output, so",
       "the crossing is equilibrium output (Y*), a resting point rather than a",
       "level anyone chose; the multiplier is the ratio of ΔY to the €20bn, not",
@@ -200,7 +200,7 @@ B_03_04_scenarios_lst <- list(
       "The government raises its spending on goods and services (G) by €20bn",
       "and leaves tax policy alone, so the whole package is borrowed. The",
       "planned-expenditure line shifts up by €20bn at every level of income,",
-      "and the crossing point slides out along the 45° line: output (Y) and",
+      "and the crossing point slides out along the E = Y line: output (Y) and",
       "planned expenditure both rise, by more than €20bn. Two leakages now",
       "decide how much more — households save (1 − c) of each euro of",
       "disposable income, and the tax rate on income (t = 0.31) takes 31 cents",
@@ -225,7 +225,7 @@ B_03_04_scenarios_lst <- list(
       "(C) falls only by c times that, because households absorb the rest by",
       "saving less: the planned-expenditure line therefore drops by c × €20bn,",
       "not by €20bn. On the cross both axes fall together — output (Y) slides",
-      "left and planned expenditure with it — to a new crossing on the 45°",
+      "left and planned expenditure with it — to a new crossing on the E = Y",
       "line. That factor of c is why the tax multiplier is −ck rather than −k;",
       "the budget balance (B) improves, because the euro has left the",
       "circular flow and been parked."
@@ -321,7 +321,7 @@ B_03_04_scenarios_lst <- list(
       "the tax rate on income (t) is 0.45 rather than Ireland's measured",
       "0.31. Nobody decides anything: a higher t flattens the",
       "planned-expenditure line, so when the line drops by €20bn it meets the",
-      "45° line closer to where it started, and output (Y) and planned",
+      "E = Y line closer to where it started, and output (Y) and planned",
       "expenditure both fall by less than they did at the lower rate. The",
       "multiplier k = 1/(1 − c(1 − t)) falls from 1.6 to 1.4, and it does so",
       "symmetrically: the leakage that damps this recession would damp a boom",
@@ -344,7 +344,7 @@ B_03_04_scenarios_lst <- list(
       "the same €20bn of government spending (ΔG). The marginal propensity to",
       "import (m) is set to 0.30 here, well above Ireland's measured 0.13, so",
       "the planned-expenditure line is much flatter: it still shifts up by",
-      "€20bn, but it meets the 45° line almost at once, and output (Y) and",
+      "€20bn, but it meets the E = Y line almost at once, and output (Y) and",
       "planned expenditure rise together by barely more than the €20bn spent.",
       "The multiplier is now k = 1/(1 − c(1 − t) + m), about 1.1. Put m back",
       "to 0.13 and the same €20bn buys markedly more — and the marginal-euro",
@@ -1256,7 +1256,7 @@ B_03_21_fiscal_lst <- list(
 ###### B_03_22: Version ########################################################
 # Note: Semantic version, shown in the footer; CHANGELOG.md has the history.
 
-B_03_22_version_chr <- "1.0.0"
+B_03_22_version_chr <- "1.0.1"
 
 ###### B_03_23: Source Repository ##############################################
 # Note: The GitHub repo, linked from the footer.
@@ -1282,7 +1282,7 @@ B_04_01_qr_src_chr <- T_07_04_qr_fn()
 # Note: The two standard ways of drawing the same equilibrium.
 
 ###### D_01_01: Keynesian Cross ################################################
-# Note: The 45 degree line, planned expenditure before and after the change,
+# Note: The E = Y line, planned expenditure before and after the change,
 #   and the two equilibria. The identity E = Y takes no ghost.
 
 D_01_01_cross_fn <- function(par, ref = NULL) {
@@ -1313,7 +1313,7 @@ D_01_01_cross_fn <- function(par, ref = NULL) {
                             T_01_02_series_vec[["main"]])
   )
 
-  # Same range on both axes, so the identity is drawn at 45 degrees
+  # Same range on both axes, so the E = Y line is drawn at 45 degrees
   lim_vec <- c(0, y_max)
   q_num   <- C_01_02_leak_fn(par)$pass_on
   a_num   <- C_01_04_autonomous_fn(par, delta = TRUE)
@@ -1367,7 +1367,7 @@ D_01_01_cross_fn <- function(par, ref = NULL) {
     coord_cartesian(xlim = lim_vec, ylim = lim_vec, expand = FALSE) +
     # Names clear their lines across the name's own width
     annotate("text", x = y_max * 0.93, y = y_max * 0.965, hjust = 1,
-             vjust = 0.5, size = 3.2, label = "45° line",
+             vjust = 0.5, size = 3.2, label = "E = Y",
              colour = T_01_02_series_vec[["reference"]]) +
     annotate("text", x = y_max * 0.98,
              y = min(a_num + q_num * (y_max * 0.98 - w_num),
@@ -1381,7 +1381,7 @@ D_01_01_cross_fn <- function(par, ref = NULL) {
       x = expression(bold("Output (" * Y * "), EUR billion")),
       y = expression(bold("Planned expenditure (" * E * "), EUR billion")),
       caption = paste0(
-        "The 45° line is the identity E = Y, every point where planned ",
+        "The E = Y line is the identity: every point where planned ",
         "expenditure equals output — not the multiplier. Equilibrium ",
         "output Y* is where the expenditure line meets it: to the left of ",
         "it planned expenditure is above output, so output is rising. ",
