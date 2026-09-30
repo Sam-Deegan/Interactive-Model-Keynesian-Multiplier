@@ -1236,7 +1236,7 @@ B_03_21_fiscal_lst <- list(
 ###### B_03_22: Version ########################################################
 # Note: Semantic version, shown in the footer; CHANGELOG.md has the history.
 
-B_03_22_version_chr <- "1.0.7"
+B_03_22_version_chr <- "1.0.8"
 
 ###### B_03_23: Source Repository ##############################################
 # Note: The GitHub repo, linked from the footer.
@@ -1356,6 +1356,8 @@ D_01_01_cross_fn <- function(par, ref = NULL) {
              label = "Planned expenditure",
              colour = T_01_02_series_vec[["main"]]) +
     labs(
+      # Short: the panel is square and a folded title is clipped
+      title = paste0("The Keynesian Cross: Y* = ", T_02_04_eur_fn(new$y)),
       x = expression(bold("Output (" * Y * "), EUR billion")),
       y = expression(bold("Planned expenditure (" * E * "), EUR billion")),
       caption = paste0(
@@ -1435,6 +1437,7 @@ D_01_02_flows_fn <- function(par, ref = NULL) {
     T_02_02_mark_x_fn(new$y, expression(Y^"*")) +
     coord_cartesian(xlim = c(0, y_max)) +
     labs(
+      title = "Injections (I + G + X) Meet Withdrawals (S + T + M)",
       x = expression(bold("Output (" * Y * "), EUR billion")),
       y = expression(bold("Injections and withdrawals, EUR billion")),
       caption = paste(
@@ -1487,6 +1490,7 @@ D_02_01_rounds_fn <- function(par, n_rounds, ref = NULL) {
     scale_x_continuous(breaks = seq_len(n_rounds)) +
     T_02_02_mark_y_fn(total, expression(k %.% Delta * A)) +
     labs(
+      title = "The Multiplier (k), One Round at a Time",
       x = expression(bold("Spending round")),
       y = expression(bold("Extra spending, EUR billion")),
       caption = paste0("Each round is the one before times q = ",
@@ -1579,6 +1583,8 @@ D_03_01_package_fn <- function(par, budget) {
         "Financed Within the Package")
     )) +
     labs(
+      title = paste0("Fiscal Packages: Six Ways to Move ",
+                     T_02_04_eur_fn(budget)),
       x = NULL,
       y = expression(bold("Change in output (" * Delta * Y *
                             "), EUR billion")),
@@ -1626,6 +1632,7 @@ D_03_02_types_fn <- function(par) {
     )) +
     scale_y_continuous(expand = expansion(mult = c(0.05, 0.12))) +
     labs(
+      title = "Household Types: Who Holds the Income, and Who Spends It",
       x = NULL,
       y = expression(bold("Income and consumption, EUR billion")),
       caption = paste0(
@@ -1701,6 +1708,8 @@ D_03_03_bridge_fn <- function(par, measured) {
     )) +
     T_02_02_mark_y_fn(1, expression(k == 1)) +
     labs(
+      title = paste0("The Induced Round: This Model's k − 1 = ",
+                     T_02_05_num_fn(k - 1)),
       x = NULL,
       y = expression(bold("Output multiplier (" * k *
                             "), split into its rounds")),
